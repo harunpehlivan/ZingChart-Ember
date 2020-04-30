@@ -1,6 +1,6 @@
 {
   "name": "ember-zingchart",
-  "version": "2.0.0", 
+  "version": "2.0.0",
   "description": "Ember component for the ZingChart JavaScript charting library.",
   "directories": {
     "doc": "doc",
@@ -9,7 +9,9 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "ember try:testall",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -58,9 +60,11 @@
     "wrapper"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "snyk": "^1.316.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+  "snyk": true
 }
